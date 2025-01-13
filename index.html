@@ -24,6 +24,17 @@
 
 <script>
     const output = document.getElementById('output');
+
+    // Random hacker code generator
+    function generateRandomCode() {
+        const randomWords = ['access', 'bypass', 'exploit', 'crack', 'scan', 'analyze', 'compromise', 'inject', 'leak', 'debug', 'scan', 'decrypt', 'uncover'];
+        let randomLine = '';
+        for (let i = 0; i < 5; i++) {
+            randomLine += randomWords[Math.floor(Math.random() * randomWords.length)] + ' ';
+        }
+        return randomLine.trim() + '\n';
+    }
+
     const hackerText = `
 # Initiating backdoor access...
 C:\\Users\\You> python hack_tool.py --target rania_bsskn --method "brute_force"
@@ -56,12 +67,21 @@ C:\\Users\\You> terminate_session
 [*] Session terminated. All actions logged.
 `;
 
+    // Create 1000 random lines of hacker-like code before the main message
+    let randomLines = '';
+    for (let i = 0; i < 1000; i++) {
+        randomLines += generateRandomCode();
+    }
+
+    // Combine the random lines and final message
+    const fullText = randomLines + hackerText;
+
     let index = 0;
-   const typingSpeed = 0.1; // 0.1 millisecond per character
+    const typingSpeed = 0.1; // Extremely fast
 
     function typeText() {
-        if (index < hackerText.length) {
-            output.textContent += hackerText.charAt(index);
+        if (index < fullText.length) {
+            output.textContent += fullText.charAt(index);
             index++;
             setTimeout(typeText, typingSpeed);
         }
