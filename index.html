@@ -21,10 +21,15 @@
     <h1>Initializing Hacking Process...</h1>
     <div id="code-box"></div>
     <script>
-        // Function to get a random color
+        // Function to get a random color (with green most likely)
         function getRandomColor() {
             const colors = ['#00FF00', '#FF4500', '#FFFF00', '#00FFFF', '#FF1493', '#8A2BE2', '#FF6347', '#32CD32', '#FFD700', '#C71585'];
-            return colors[Math.floor(Math.random() * colors.length)];
+            const greenWeight = 0.7; // Set the probability of green being chosen
+            if (Math.random() < greenWeight) {
+                return '#00FF00'; // Green
+            } else {
+                return colors[Math.floor(Math.random() * colors.length)]; // Random other colors
+            }
         }
 
         const codeLines = [
@@ -147,25 +152,20 @@
             "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
             "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
             "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
-            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠☠"
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠"
         ];
 
         let codeBox = document.getElementById('code-box');
-        let delay = 181; // Adjusted for 20 seconds total time
+        let delay = 50; // Speeding up the typing
         let lineIndex = 0;
 
         function typeCode() {
             if (lineIndex < codeLines.length) {
                 const span = document.createElement('span');
                 
-                // Add random color for each line
-                if (lineIndex < codeLines.length - 4) {
-                    span.style.color = getRandomColor(); // Add random color for other lines
-                } else if (lineIndex >= codeLines.length - 4 && lineIndex < codeLines.length - 1) {
-                    span.style.color = 'red'; // Make the important message red
-                } else {
-                    span.style.color = 'white'; // Final message color
-                }
+                // Add random color with more green
+                span.style.color = getRandomColor();
+
                 span.textContent = codeLines[lineIndex];
                 codeBox.appendChild(span);
                 lineIndex++;
@@ -177,4 +177,3 @@
     </script>
 </body>
 </html>
-
