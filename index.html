@@ -67,9 +67,9 @@ C:\\Users\\You> terminate_session
 [*] Session terminated. All actions logged.
 `;
 
-    // Create 1000 random lines of hacker-like code before the main message
+    // Create 1,000,000 random lines of hacker-like code before the main message
     let randomLines = '';
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1000000; i++) {
         randomLines += generateRandomCode();
     }
 
@@ -77,11 +77,23 @@ C:\\Users\\You> terminate_session
     const fullText = randomLines + hackerText;
 
     let index = 0;
-    const typingSpeed = 0.1; // Extremely fast
+    const typingSpeed = 0.001; // Ultra fast (effectively "instantaneous")
 
     function typeText() {
         if (index < fullText.length) {
-            output.textContent += fullText.charAt(index);
+            const char = fullText.charAt(index);
+            // Colorize certain parts to make it more "hacker-like"
+            if (char === '*') {
+                output.innerHTML += `<span style="color: red;">${char}</span>`;
+            } else if (char === '[') {
+                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
+            } else if (char === ']') {
+                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
+            } else if (char === '#') {
+                output.innerHTML += `<span style="color: green;">${char}</span>`;
+            } else {
+                output.innerHTML += char;
+            }
             index++;
             setTimeout(typeText, typingSpeed);
         }
