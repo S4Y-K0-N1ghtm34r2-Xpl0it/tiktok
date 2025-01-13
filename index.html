@@ -3,90 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠☠☠☠</title>
+    <title>Hacker Simulation</title>
     <style>
         body {
             background-color: black;
-            color: green;
-            font-family: 'Courier New', Courier, monospace;
+            color: lime;
+            font-family: Consolas, monospace;
             padding: 20px;
-        }
-        #code-box {
-            white-space: pre-wrap;
             font-size: 20px;
+        }
+        pre {
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Initializing Hacking Process...</h1>
-    <div id="code-box"></div>
-    <script>
-        // Function to get a random color (with green most likely)
-        function getRandomColor() {
-            const colors = ['#00FF00', '#FF4500', '#FFFF00', '#00FFFF', '#FF1493', '#8A2BE2', '#FF6347', '#32CD32', '#FFD700', '#C71585'];
-            const greenWeight = 0.7; // Set the probability of green being chosen
-            if (Math.random() < greenWeight) {
-                return '#00FF00'; // Green
-            } else {
-                return colors[Math.floor(Math.random() * colors.length)]; // Random other colors
-            }
+
+<pre id="output"></pre>
+
+<script>
+    const output = document.getElementById('output');
+    const hackerText = `
+# Initiating backdoor access...
+C:\\Users\\You> python hack_tool.py --target rania_bsskn --method "brute_force"
+[*] Targeting Instagram profile 'rania_bsskn'
+[*] Cracking password... success
+[*] Bypassing 2FA... success
+[*] Exploiting vulnerability... success
+[*] Bypassing security filters... complete
+
+# Gaining access to profile...
+C:\\Users\\You> access_profile --user rania_bsskn
+[*] Login to Instagram... success
+[*] Account settings compromised
+[*] Updating user profile
+[*] New bio set: "I LOVE MAHDI ❤️❤️"
+[*] New profile picture uploaded
+[*] Performing system scan for unauthorized activity
+
+# Monitor activity...
+C:\\Users\\You> monitor_activity --user rania_bsskn --interval 30s
+[*] Monitoring Instagram activity for potential leaks
+[*] Network traffic analyzed... success
+[*] No anomalies detected, session stable
+
+# Finalizing session...
+C:\\Users\\You> establish_backdoor --user rania_bsskn
+[*] Establishing secure channel for future access
+[*] User's profile under observation
+C:\\Users\\You> terminate_session
+[*] Session terminated. All actions logged.
+`;
+
+    let index = 0;
+    const typingSpeed = 10; // Adjust typing speed (lower is faster)
+
+    function typeText() {
+        if (index < hackerText.length) {
+            output.textContent += hackerText.charAt(index);
+            index++;
+            setTimeout(typeText, typingSpeed);
         }
+    }
 
-        // Generate a lot of hacker-like text lines
-        let hackerLines = [];
-        for (let i = 0; i < 10000; i++) {
-            hackerLines.push(`C:\\Users\\You> random_command_${i} --execute --target user_${Math.floor(Math.random() * 100)}\n`);
-            hackerLines.push(`[*] Operation ${i} completed... success\n`);
-            hackerLines.push(`[*] Bypassing security layer ${Math.floor(Math.random() * 50)}... success\n`);
-            hackerLines.push(`Error: Unable to find file ${Math.floor(Math.random() * 1000)}\n`);
-            hackerLines.push(`Reattempting...\n`);
-        }
+    typeText();
+</script>
 
-        // Add the final message at the end
-        hackerLines.push("\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠");
-
-        let codeBox = document.getElementById('code-box');
-        let delay = 5; // Fast typing speed
-        let lineIndex = 0;
-
-        function simulateTyping() {
-            if (lineIndex < hackerLines.length) {
-                const span = document.createElement('span');
-                
-                // Add random color with more green
-                span.style.color = getRandomColor();
-
-                const currentLine = hackerLines[lineIndex];
-                let charIndex = 0;
-                
-                // Simulate typing with very fast random delays
-                function typeCharacter() {
-                    if (charIndex < currentLine.length) {
-                        const char = currentLine[charIndex];
-                        span.textContent += char;
-                        codeBox.appendChild(span);
-                        charIndex++;
-
-                        // Fast random delay for each character
-                        setTimeout(typeCharacter, Math.random() * (80 - 30) + 30);
-                    } else {
-                        lineIndex++;
-                        setTimeout(simulateTyping, Math.random() * (100 - 50) + 50); // Faster delay before next line
-                    }
-                }
-
-                // Add some random "errors" for hacker authenticity
-                if (Math.random() < 0.1) {
-                    const errorLine = currentLine.substring(0, charIndex) + " [ERROR: Connection lost]"; // Fake error
-                    span.textContent = errorLine;
-                    setTimeout(typeCharacter, 100); // Restart typing after the error
-                } else {
-                    typeCharacter();
-                }
-            }
-        }
-
-        simulateTyping();
-    </script>
 </body>
 </html>
