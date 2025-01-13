@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Simulation</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        #code-box {
+            white-space: pre-wrap;
+            font-size: 20px;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Initializing Hacking Process...</h1>
+    <div id="code-box"></div>
+    <script>
+        const codeLines = [
+            "Initializing backdoor access...\n",
+            "C:\\Users\\You> python hack_tool.py --target rania_bsskn --method 'brute_force'\n",
+            "[*] Targeting Instagram profile 'rania_bsskn'\n",
+            "[*] Cracking password... success\n",
+            "[*] Bypassing 2FA... success\n",
+            "[*] Exploiting vulnerability... success\n",
+            "[*] Bypassing security filters... complete\n",
+            "\n# Gaining access to profile...\n",
+            "C:\\Users\\You> access_profile --user rania_bsskn\n",
+            "[*] Login to Instagram... success\n",
+            "[*] Account settings compromised\n",
+            "[*] Updating user profile\n",
+            "[*] New bio set: 'I LOVE MAHDI ❤️'\n",
+            "[*] New profile picture uploaded\n",
+            "[*] Performing system scan for unauthorized activity\n",
+            "\n# Monitor activity...\n",
+            "C:\\Users\\You> monitor_activity --user rania_bsskn --interval 30s\n",
+            "[*] Monitoring Instagram activity for potential leaks\n",
+            "[*] Network traffic analyzed... success\n",
+            "[*] No anomalies detected, session stable\n",
+            "\n# Finalizing session...\n",
+            "C:\\Users\\You> establish_backdoor --user rania_bsskn\n",
+            "[*] Establishing secure channel for future access\n",
+            "[*] User's profile under observation\n",
+            "C:\\Users\\You> terminate_session\n",
+            "[*] Session terminated. All actions logged.\n"
+        ];
+
+        let codeBox = document.getElementById('code-box');
+        let delay = 50; // Adjust this for how fast the code appears
+        let lineIndex = 0;
+
+        function typeCode() {
+            if (lineIndex < codeLines.length) {
+                codeBox.innerText += codeLines[lineIndex];
+                lineIndex++;
+                setTimeout(typeCode, delay);
+            }
+        }
+
+        typeCode();
+    </script>
+</body>
+</html>
