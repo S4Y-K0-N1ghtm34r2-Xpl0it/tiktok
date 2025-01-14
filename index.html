@@ -39,22 +39,23 @@
 
     <!-- Adding hacker-style text above the username -->
     <div id="code-box">
-        <span class="red">[*] Booting system...\n</span>
-        <span class="red">[*] Checking for vulnerabilities...\n</span>
-        <span class="red">[*] Initializing secure connections...\n</span>
-        <span class="red">[*] Scanning local network for targets...\n</span>
-        <span class="red">[*] Found target: rania_bsskn\n</span>
-        <span class="red">[*] Encrypting key...\n</span>
-        <span class="red">[*] Decrypting firewall...\n</span>
-        <span class="red">[*] Exploiting system weakness...\n</span>
-        <span class="red">[*] Data packet injected...\n</span>
-        <span class="red">[*] Bypassing user authentication...\n</span>
-        <span class="red">[*] Accessing profile...\n</span>
-        <span class="red">[*] Username: rania_bsskn\n</span>
+        <!-- The text is now included in the typeCode effect -->
     </div>
 
     <script>
         const codeLines = [
+            "[*] Booting system...\n",
+            "[*] Checking for vulnerabilities...\n",
+            "[*] Initializing secure connections...\n",
+            "[*] Scanning local network for targets...\n",
+            "[*] Found target: rania_bsskn\n",
+            "[*] Encrypting key...\n",
+            "[*] Decrypting firewall...\n",
+            "[*] Exploiting system weakness...\n",
+            "[*] Data packet injected...\n",
+            "[*] Bypassing user authentication...\n",
+            "[*] Accessing profile...\n",
+            "[*] Username: rania_bsskn\n",
             "[*] Collecting profile metadata...\n",
             "[*] Metadata retrieved.\n",
             "[*] Cracking password... success\n",
@@ -89,7 +90,7 @@
             if (lineIndex < codeLines.length) {
                 codeBox.innerHTML += codeLines[lineIndex];
                 lineIndex++;
-                setTimeout(typeCode, 100); // Increased typing speed
+                setTimeout(typeCode, 100); // Adjust typing speed here
             }
         }
 
@@ -101,15 +102,12 @@
         }, 11000); // Redirect after 11 seconds
     </script>
 
-    <!-- Google Drive Video Embed with Autoplay and Loop -->
+    <!-- Video Embed with Autoplay (No Sound) -->
     <div>
-        <video autoplay loop>
-            <source src="https://drive.google.com/uc?export=download&id=1eb7R6KkEdhFQwnluIp9foutxw8-p_GGp" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2GTvMjGLM4o?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <div id="hacked-text" style="color: red; font-size: 20px;">
+    <div id="hacked-text" style="color: red;">
         HACKED BY: SAYKOX09
     </div>
 </body>
