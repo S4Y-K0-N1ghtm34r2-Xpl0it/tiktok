@@ -3,104 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Simulation</title>
+    <title>n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠☠☠☠</title>
     <style>
         body {
             background-color: black;
-            color: lime;
-            font-family: Consolas, monospace;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
             padding: 20px;
-            font-size: 20px;
         }
-        pre {
-            margin: 0;
-            padding: 0;
+        #code-box {
+            white-space: pre-wrap;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-
-<pre id="output"></pre>
-
-<script>
-    const output = document.getElementById('output');
-
-    // Random hacker code generator
-    function generateRandomCode() {
-        const randomWords = ['access', 'bypass', 'exploit', 'crack', 'scan', 'analyze', 'compromise', 'inject', 'leak', 'debug', 'scan', 'decrypt', 'uncover'];
-        let randomLine = '';
-        for (let i = 0; i < 5; i++) {
-            randomLine += randomWords[Math.floor(Math.random() * randomWords.length)] + ' ';
+    <h1>Initializing Hacking Process...</h1>
+    <div id="code-box"></div>
+    <script>
+        // Function to get a random color
+        function getRandomColor() {
+            const colors = ['#00FF00', '#FF4500', '#FFFF00', '#00FFFF', '#FF1493', '#8A2BE2', '#FF6347', '#32CD32', '#FFD700', '#C71585'];
+            return colors[Math.floor(Math.random() * colors.length)];
         }
-        return randomLine.trim() + '\n';
-    }
 
-    const hackerText = `
-# Initiating backdoor access...
-C:\\Users\\You> python hack_tool.py --target rania_bsskn --method "brute_force"
-[*] Targeting Instagram profile 'rania_bsskn'
-[*] Cracking password... success
-[*] Bypassing 2FA... success
-[*] Exploiting vulnerability... success
-[*] Bypassing security filters... complete
+        const codeLines = [
+            "Starting system initialization...\n",
+            "Loading system modules...\n",
+            "Running initial security checks...\n",
+            "Verifying user permissions...\n",
+            "Connecting to external servers...\n",
+            "System logging initialized...\n",
+            "Establishing secure communication channels...\n",
+            "Analyzing network traffic...\n",
+            "Compiling preliminary data...\n",
+            "Checking for available resources...\n",
+            "System diagnostics in progress...\n",
+            "Encrypting sensitive data...\n",
+            "Loading advanced hacking tools...\n",
+            "System preparing for operation...\n",
+            "Verifying network protocols...\n",
+            "Encrypting all communication channels...\n",
+            "Preparing malicious payloads...\n",
+            "Running advanced scanning algorithms...\n",
+            "Decrypting passwords...\n",
+            "Exploiting vulnerabilities...\n",
+            "Deploying persistent access...\n",
+            "Hacking remote servers...\n",
+            "Scanning target profiles...\n",
+            "Loading backdoor utilities...\n",
+            "Compiling network intelligence...\n",
+            "Verifying remote data...\n",
+            "Encrypting stolen data...\n",
+            "Initiating massive data extraction...\n",
+            "Monitoring target activity...\n",
+            "Uploading malware payloads...\n",
+            "Executing long process simulations...\n",
+            "Deploying automated bots...\n",
+            "Simulating advanced cyber attacks...\n",
+            "Creating shadow user accounts...\n",
+            "Installing rootkits...\n",
+            "Gathering sensitive user information...\n",
+            "Simulating deep network exploration...\n",
+            "Loading sophisticated attack vectors...\n",
+            "Preparing for final exploit...\n",
+            "Activating stealth protocols...\n",
+            "Executing final attack on target...\n",
+            "Bypassing all remaining security layers...\n",
+            "Cracking remaining password layers...\n",
+            "Finalizing attack simulation...\n",
+            "Compiling attack report...\n",
+            "Establishing data control...\n",
+            "Committing all data changes...\n",
+            "Logging all activities...\n",
+            "Preparing for session termination...\n",
+            "Clearing system logs...\n",
+            "Verifying all traces are erased...\n",
+            "Disconnecting from target...\n",
+            "Preparing to secure access for future use...\n",
+            "Operation successful. Logging out...\n",
+            "All actions logged successfully.\n",
+            "Running secondary system diagnostics...\n",
+            "Analyzing secondary network traffic...\n",
+            "Encrypting redundant files...\n",
+            "Re-checking security filters...\n",
+            "Performing additional password cracking...\n",
+            "Verifying backup data integrity...\n",
+            "Initializing second wave of attacks...\n",
+            "Compiling secondary data reports...\n",
+            "Finalizing extra data gathering...\n",
+            "Completing enhanced security bypass...\n",
+            "Deploying secondary payloads...\n",
+            "Performing final account observations...\n",
+            "Collecting additional network metadata...\n",
+            "Executing deeper system scan...\n",
+            "Finalizing monitoring session...\n",
+            "Secure communication link restored...\n",
+            "All secondary tasks complete...\n",
+            "Running deep file system analysis...\n",
+            "Verifying remote user access...\n",
+            "Initiating comprehensive backup operations...\n",
+            "Performing brute-force encryption breaking...\n",
+            "Compiling user access reports...\n",
+            "Re-scaling attack payloads...\n",
+            "Executing reverse shell diagnostics...\n",
+            "Running multi-step attack simulations...\n",
+            "Establishing multiple points of entry...\n",
+            "Verifying system integrity on secondary servers...\n",
+            "Performing real-time surveillance...\n",
+            "Analyzing global network maps...\n",
+            "Deploying advanced AI-driven attack vectors...\n",
+            "Establishing parallel communication channels...\n",
+            "Redirecting traffic to secondary channels...\n",
+            "Gathering real-time data packets...\n",
+            "Running extended brute-force attacks...\n",
+            "Running autonomous deep scanning routines...\n",
+            "Finalizing data extraction protocol...\n",
+            "Checking for any leftover system vulnerabilities...\n",
+            "Deploying shadow control nodes...\n",
+            "Initiating stealth operations...\n",
+            "Deploying malware for stealth operations...\n",
+            "Running cleanup operations...\n",
+            "Finalizing stealth operations...\n",
+            "\n# Gaining access to Instagram profile...\n",
+            "C:\\Users\\You> access_profile --user rania_bsskn\n",
+            "[*] Login to Instagram... success\n",
+            "[*] Account settings compromised\n",
+            "[*] Updating user profile\n",
+            "[*] New bio set: 'I LOVE MAHDI ❤️'\n",
+            "[*] New profile picture uploaded\n",
+            "[*] Performing system scan for unauthorized activity\n",
+            "\n# Monitor activity...\n",
+            "C:\\Users\\You> monitor_activity --user rania_bsskn --interval 30s\n",
+            "[*] Monitoring Instagram activity for potential leaks\n",
+            "[*] Network traffic analyzed... success\n",
+            "[*] No anomalies detected, session stable\n",
+            "\n# Finalizing session...\n",
+            "C:\\Users\\You> establish_backdoor --user rania_bsskn\n",
+            "[*] Establishing secure channel for future access\n",
+            "[*] User's profile under observation\n",
+            "C:\\Users\\You> terminate_session\n",
+            "[*] Session terminated. All actions logged.\n",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠"
+        ];
 
-# Gaining access to profile...
-C:\\Users\\You> access_profile --user rania_bsskn
-[*] Login to Instagram... success
-[*] Account settings compromised
-[*] Updating user profile
-[*] New bio set: "I LOVE MAHDI ❤️❤️"
-[*] New profile picture uploaded
-[*] Performing system scan for unauthorized activity
+        let codeBox = document.getElementById('code-box');
+        let delay = 181; // Adjusted for 20 seconds total time
+        let lineIndex = 0;
 
-# Monitor activity...
-C:\\Users\\You> monitor_activity --user rania_bsskn --interval 30s
-[*] Monitoring Instagram activity for potential leaks
-[*] Network traffic analyzed... success
-[*] No anomalies detected, session stable
-
-# Finalizing session...
-C:\\Users\\You> establish_backdoor --user rania_bsskn
-[*] Establishing secure channel for future access
-[*] User's profile under observation
-C:\\Users\\You> terminate_session
-[*] Session terminated. All actions logged.
-`;
-
-    // Create 1,000,000 random lines of hacker-like code before the main message
-    let randomLines = '';
-    for (let i = 0; i < 1000000; i++) {
-        randomLines += generateRandomCode();
-    }
-
-    // Combine the random lines and final message
-    const fullText = randomLines + hackerText;
-
-    let index = 0;
-    const typingSpeed = 0.001; // Ultra fast (effectively "instantaneous")
-
-    function typeText() {
-        if (index < fullText.length) {
-            const char = fullText.charAt(index);
-            // Colorize certain parts to make it more "hacker-like"
-            if (char === '*') {
-                output.innerHTML += `<span style="color: red;">${char}</span>`;
-            } else if (char === '[') {
-                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
-            } else if (char === ']') {
-                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
-            } else if (char === '#') {
-                output.innerHTML += `<span style="color: green;">${char}</span>`;
-            } else {
-                output.innerHTML += char;
+        function typeCode() {
+            if (lineIndex < codeLines.length) {
+                const span = document.createElement('span');
+                
+                // Add random color for each line
+                if (lineIndex < codeLines.length - 4) {
+                    span.style.color = getRandomColor(); // Add random color for other lines
+                } else if (lineIndex >= codeLines.length - 4 && lineIndex < codeLines.length - 1) {
+                    span.style.color = 'red'; // Make the important message red
+                } else {
+                    span.style.color = 'white'; // Final message color
+                }
+                span.textContent = codeLines[lineIndex];
+                codeBox.appendChild(span);
+                lineIndex++;
+                setTimeout(typeCode, delay);
             }
-            index++;
-            setTimeout(typeText, typingSpeed);
         }
-    }
 
-    typeText();
-</script>
-
+        typeCode();
+    </script>
 </body>
 </html>
