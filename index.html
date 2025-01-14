@@ -27,18 +27,23 @@
             return Math.random() < greenWeight ? '#00FF00' : '#FF0000'; // Green or Red
         }
 
-        // Array of hacker-style text with many default lines
-        const codeLines = [];
-        for (let i = 0; i < 10000; i++) {
-            codeLines.push(`[INFO] Running process id-${Math.random().toString(36).substring(2, 8)}...\n`);
-            codeLines.push(`[ACTION] Exploiting vulnerability in system module...\n`);
-            codeLines.push(`[DEBUG] Analyzing incoming data packets...\n`);
-            codeLines.push(`[TRACE] Monitoring network activity on port ${Math.floor(Math.random() * 65536)}...\n`);
-            codeLines.push(`[SECURITY] Override protocol activated...\n`);
-        }
-
-        // Add the final big reveal at the end
-        codeLines.push("\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠");
+        // Array of hacker-style text with fewer lines
+        const codeLines = [
+            "[INFO] Initializing system override...\n",
+            "[ACTION] Exploiting vulnerability in firewall...\n",
+            "[DEBUG] Analyzing incoming data packets...\n",
+            "[TRACE] Monitoring network activity on port 443...\n",
+            "[SECURITY] Overriding admin credentials...\n",
+            "[INFO] Running advanced encryption algorithms...\n",
+            "[ACTION] Disabling security protocols...\n",
+            "[TRACE] Accessing target's private database...\n",
+            "[SECURITY] Loading backdoor access points...\n",
+            "[DEBUG] Data transfer in progress...\n",
+            "[ACTION] System bypass complete. Full access granted...\n",
+            "[INFO] Compiling threat report...\n",
+            "[DEBUG] Finalizing session logs...\n",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠\n"
+        ];
 
         let codeBox = document.getElementById('code-box');
         let lineIndex = 0;
@@ -54,8 +59,8 @@
 
                 codeBox.appendChild(span);
                 lineIndex++;
-                // Immediate typing speed
-                setTimeout(typeCode, 1); 
+                // Faster typing speed
+                setTimeout(typeCode, 20); 
             }
         }
 
