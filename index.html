@@ -7,64 +7,92 @@
     <style>
         body {
             background-color: black;
-            color: white;
-            font-family: monospace;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
             padding: 20px;
         }
-        .green {
-            color: #00ff00;
-        }
-        .red {
-            color: #ff0000;
-        }
-        .final {
-            color: #ff0000;
-            font-size: 1.2em;
+        #code-box {
+            white-space: pre-wrap;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <pre id="output"></pre>
-
+    <h1>Initializing Hacking Process...</h1>
+    <div id="code-box"></div>
     <script>
-        const outputElement = document.getElementById("output");
-
-        // Generate random hacker-like lines
-        const randomLines = [];
-        for (let i = 0; i < 1000000; i++) {
-            const randomColor = Math.random() < 0.9 ? "green" : "red";
-            randomLines.push(`<span class="${randomColor}">[0x${Math.random().toString(16).substring(2, 8)}] Process initiated...</span>`);
+        // Function to return mostly green and some red
+        function getRandomColor() {
+            const greenWeight = 0.9; // 90% green
+            return Math.random() < greenWeight ? '#00FF00' : '#FF0000'; // Green or Red
         }
 
-        // Final red message
-        const finalMessage = `
-<span class="final">
-# Target: rania_bsskn
-# Password cracked... Success
-# Bio updated to: "I LOVE MAHDI ❤️❤️"
-# Session terminated.
-</span>`;
+        // Hacker-style text
+        const codeLines = [
+            "[*] Targeting Instagram profile 'rania_bsskn'\n",
+            "[*] Cracking password... success\n",
+            "[*] Bypassing 2FA... success\n",
+            "[*] Exploiting vulnerability... success\n",
+            "[*] Bypassing security filters... complete\n",
+            "[*] Network traffic analyzed... success\n",
+            "[*] Establishing secure connection\n",
+            "[*] Brute-forcing additional credentials...\n",
+            "[*] Session hijacking in progress\n",
+            "[*] Performing deep scan on target profile\n",
+            "[*] Collecting private messages...\n",
+            "[*] Downloading photos...\n",
+            "[*] Analyzing user behavior patterns...\n",
+            "[*] Spoofing device information...\n",
+            "[*] Deploying malware package...\n",
+            "[*] Malware successfully deployed\n",
+            "[*] Backdoor established...\n",
+            "[*] Generating fake activity logs\n",
+            "[*] Monitoring target interactions...\n",
+            "[*] Compiling data package...\n",
+            "[*] Injecting unauthorized scripts...\n",
+            "[*] Finalizing attack vector...\n",
+            "[*] System overload simulation complete\n",
+            "[*] Clearing logs...\n",
+            "[*] Masking source IP...\n",
+            "[*] Deleting traces...\n",
+            "[*] Terminating shadow session...\n",
+            "[*] Operation complete.\n",
+            "\n# Gaining access to profile...\n",
+            "C:\\Users\\You> access_profile --user rania_bsskn\n",
+            "[*] Login to Instagram... success\n",
+            "[*] Account settings compromised\n",
+            "[*] Updating user profile\n",
+            "[*] New bio set: 'I LOVE MAHDI ❤️'\n",
+            "[*] New profile picture uploaded\n",
+            "[*] Performing system scan for unauthorized activity\n",
+            "[*] Monitoring Instagram activity for potential leaks\n",
+            "[*] No anomalies detected, session stable\n",
+            "\n# Finalizing session...\n",
+            "C:\\Users\\You> terminate_session\n",
+            "[*] Session terminated. All actions logged.\n",
+            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠\n"
+        ];
 
-        // Function to type out text quickly
+        let codeBox = document.getElementById('code-box');
         let lineIndex = 0;
-        function typeLine() {
-            if (lineIndex < randomLines.length) {
-                outputElement.innerHTML += randomLines[lineIndex] + "\n";
+
+        function typeCode() {
+            if (lineIndex < codeLines.length) {
+                const line = codeLines[lineIndex];
+                const span = document.createElement('span');
+                span.textContent = line;
+
+                // Set the color to green or red
+                span.style.color = getRandomColor();
+
+                codeBox.appendChild(span);
                 lineIndex++;
-                if (lineIndex % 50 === 0) {
-                    // Flush to screen in batches
-                    setTimeout(typeLine, 1); 
-                } else {
-                    typeLine();
-                }
-            } else {
-                // After typing all lines, show final message
-                outputElement.innerHTML += finalMessage;
+                // Fast typing speed
+                setTimeout(typeCode, 10);
             }
         }
 
-        // Start typing
-        typeLine();
+        typeCode();
     </script>
 </body>
 </html>
