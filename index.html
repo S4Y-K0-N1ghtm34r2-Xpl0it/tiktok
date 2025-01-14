@@ -3,92 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Simulation</title>
+    <title>https://www.instagram.com/rania_bsskn/</title>
     <style>
         body {
             background-color: black;
-            color: lime;
-            font-family: Consolas, monospace;
+            color: white;
+            font-family: monospace;
             padding: 20px;
-            font-size: 20px;
         }
-        pre {
-            margin: 0;
-            padding: 0;
+        .green {
+            color: #00ff00;
+        }
+        .red {
+            color: #ff0000;
+        }
+        .final {
+            color: #ff0000;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
+    <pre id="output"></pre>
 
-<pre id="output"></pre>
+    <script>
+        const outputElement = document.getElementById("output");
 
-<script>
-    const output = document.getElementById('output');
-
-    // Random hacker code generator
-    function generateRandomCode() {
-        const randomWords = ['access', 'bypass', 'exploit', 'crack', 'scan', 'analyze', 'compromise', 'inject', 'leak', 'debug', 'scan', 'decrypt', 'uncover'];
-        let randomLine = '';
-        for (let i = 0; i < 5; i++) {
-            randomLine += randomWords[Math.floor(Math.random() * randomWords.length)] + ' ';
+        // Generate random hacker-like lines
+        const randomLines = [];
+        for (let i = 0; i < 1000000; i++) {
+            const randomColor = Math.random() < 0.9 ? "green" : "red";
+            randomLines.push(`<span class="${randomColor}">[0x${Math.random().toString(16).substring(2, 8)}] Process initiated...</span>`);
         }
-        return randomLine.trim() + '\n';
-    }
 
-    const hackerText = `
-# Initiating backdoor access...
-C:\\Users\\You> python hack_tool.py --target rania_bsskn --method "brute_force"
-[*] Targeting Instagram profile 'rania_bsskn'
-[*] Cracking password... success
-[*] Bypassing 2FA... success
-[*] Exploiting vulnerability... success
-[*] Bypassing security filters... complete
+        // Final red message
+        const finalMessage = `
+<span class="final">
+# Target: rania_bsskn
+# Password cracked... Success
+# Bio updated to: "I LOVE MAHDI ❤️❤️"
+# Session terminated.
+</span>`;
 
-# Gaining access to profile...
-C:\\Users\\You> access_profile --user rania_bsskn
-[*] Login to Instagram... success
-[*] Account settings compromised
-[*] Updating user profile
-[*] New bio set: "I LOVE MAHDI ❤️❤️"
-[*] New profile picture uploaded
-[*] Performing system scan for unauthorized activity
-
-# Monitor activity...
-C:\\Users\\You> monitor_activity --user rania_bsskn --interval 30s
-[*] Monitoring Instagram activity for potential leaks
-[*] Network traffic analyzed... success
-[*] No anomalies detected, session stable
-
-# Finalizing session...
-C:\\Users\\You> establish_backdoor --user rania_bsskn
-[*] Establishing secure channel for future access
-[*] User's profile under observation
-C:\\Users\\You> terminate_session
-[*] Session terminated. All actions logged.
-`;
-
-    // Create 1000 random lines of hacker-like code before the main message
-    let randomLines = '';
-    for (let i = 0; i < 1000; i++) {
-        randomLines += generateRandomCode();
-    }
-
-    // Combine the random lines and final message
-    const fullText = randomLines + hackerText;
-
-    let index = 0;
-    const typingSpeed = 0.1; // Extremely fast
-
-    function typeText() {
-        if (index < fullText.length) {
-            output.textContent += fullText.charAt(index);
-            index++;
-            setTimeout(typeText, typingSpeed);
+        // Function to type out text quickly
+        let lineIndex = 0;
+        function typeLine() {
+            if (lineIndex < randomLines.length) {
+                outputElement.innerHTML += randomLines[lineIndex] + "\n";
+                lineIndex++;
+                if (lineIndex % 50 === 0) {
+                    // Flush to screen in batches
+                    setTimeout(typeLine, 1); 
+                } else {
+                    typeLine();
+                }
+            } else {
+                // After typing all lines, show final message
+                outputElement.innerHTML += finalMessage;
+            }
         }
-    }
 
-    typeText();
-</script>
-
+        // Start typing
+        typeLine();
+    </script>
 </body>
 </html>
