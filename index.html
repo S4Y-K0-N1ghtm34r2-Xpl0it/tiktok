@@ -27,11 +27,6 @@
             display: block;
             margin-bottom: 20px; /* Space between image and content */
         }
-        #hacked-text {
-            color: red;
-            font-size: 24px;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -44,22 +39,23 @@
 
     <!-- Adding hacker-style text above the username -->
     <div id="code-box">
-        <span class="red">[*] Booting system...\n</span>
-        <span class="red">[*] Checking for vulnerabilities...\n</span>
-        <span class="red">[*] Initializing secure connections...\n</span>
-        <span class="red">[*] Scanning local network for targets...\n</span>
-        <span class="red">[*] Found target: rania_bsskn\n</span>
-        <span class="red">[*] Encrypting key...\n</span>
-        <span class="red">[*] Decrypting firewall...\n</span>
-        <span class="red">[*] Exploiting system weakness...\n</span>
-        <span class="red">[*] Data packet injected...\n</span>
-        <span class="red">[*] Bypassing user authentication...\n</span>
-        <span class="red">[*] Accessing profile...\n</span>
-        <span class="red">[*] Username: rania_bsskn\n</span>
+        <!-- The text is now included in the typeCode effect -->
     </div>
 
     <script>
         const codeLines = [
+            "[*] Booting system...\n",
+            "[*] Checking for vulnerabilities...\n",
+            "[*] Initializing secure connections...\n",
+            "[*] Scanning local network for targets...\n",
+            "[*] Found target: rania_bsskn\n",
+            "[*] Encrypting key...\n",
+            "[*] Decrypting firewall...\n",
+            "[*] Exploiting system weakness...\n",
+            "[*] Data packet injected...\n",
+            "[*] Bypassing user authentication...\n",
+            "[*] Accessing profile...\n",
+            "[*] Username: rania_bsskn\n",
             "[*] Collecting profile metadata...\n",
             "[*] Metadata retrieved.\n",
             "[*] Cracking password... success\n",
@@ -94,34 +90,25 @@
             if (lineIndex < codeLines.length) {
                 codeBox.innerHTML += codeLines[lineIndex];
                 lineIndex++;
-                setTimeout(typeCode, 100); // Increased typing speed
+                setTimeout(typeCode, 100); // Adjust typing speed here
             }
         }
 
         typeCode();
 
-        // Redirect after 12 seconds
+        // Redirect after 11 seconds
         setTimeout(function() {
             window.location.href = "https://www.instagram.com/rania_bsskn/"; // Redirect link
-        }, 12000); // Redirect after 12 seconds
+        }, 11000); // Redirect after 11 seconds
     </script>
 
-    <!-- Video Embed with Autoplay and Sound -->
+    <!-- Video Embed with Autoplay (No Sound) -->
     <div>
-        <iframe id="video-frame" width="560" height="315" src="https://www.youtube.com/embed/2GTvMjGLM4o?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2GTvMjGLM4o?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <div id="hacked-text">
-        HACKED BY: $⧫Ҝ∂∆⸸¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠
+    <div id="hacked-text" style="color: red;">
+        HACKED BY: SAYKOX09
     </div>
-
-    <script>
-        // Unmute the video after a short delay to ensure autoplay works
-        setTimeout(function() {
-            var videoFrame = document.getElementById('video-frame');
-            var videoSrc = videoFrame.src;
-            videoFrame.src = videoSrc.replace('mute=1', 'mute=0'); // Unmute after 1 second
-        }, 1000);
-    </script>
 </body>
 </html>
