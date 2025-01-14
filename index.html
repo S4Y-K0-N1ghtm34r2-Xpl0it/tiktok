@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://www.instagram.com/rania_bsskn/</title>
+    <title>Redirect After Video</title>
     <style>
         body {
             background-color: black;
             color: green;
             font-family: 'Courier New', Courier, monospace;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        video {
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 20px;
         }
         #code-box {
             white-space: pre-wrap;
             font-size: 20px;
+            display: none;
         }
         .red {
             color: red;
@@ -22,23 +35,30 @@
             color: #8B0000; /* Deep Red */
         }
         img {
-            max-width: 100%; /* Ensures the image scales correctly */
+            max-width: 90%; /* Resize image */
             height: auto;
             display: block;
-            margin-bottom: 20px; /* Space between image and content */
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Image from the provided URL -->
-    <a href="https://imgbb.com/">
-        <img src="https://i.ibb.co/m4ppPyd/Capture-d-e-cran-2025-01-14-a-13-44-26.png" alt="Capture-d-e-cran-2025-01-14-a-13-44-26" border="0" />
-    </a>
-    <h1>Initializing Hacking Process...</h1>
-    <div id="code-box">
-        <span class="red">$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>
+    <video id="intro-video" autoplay muted>
+        <source src="https://drive.google.com/uc?export=download&id=1QEufJ8xwRxJTixdwjWVNemnOBK7_N0cT" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="content" style="display: none;">
+        <img src="https://i.ibb.co/5LZZJjC" alt="Image">
+        <h1>Initializing Hacking Process...</h1>
+        <div id="code-box">
+            <span class="red">$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>
+        </div>
     </div>
     <script>
+        const video = document.getElementById('intro-video');
+        const content = document.getElementById('content');
+        const codeBox = document.getElementById('code-box');
+
         const codeLines = [
             "[*] Username: rania_bsskn\n",
             "[*] Collecting profile metadata...\n",
@@ -68,18 +88,22 @@
             "<span class='deep-red'>$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>"
         ];
 
-        let codeBox = document.getElementById('code-box');
         let lineIndex = 0;
 
         function typeCode() {
             if (lineIndex < codeLines.length) {
                 codeBox.innerHTML += codeLines[lineIndex];
                 lineIndex++;
-                setTimeout(typeCode, 100); // Increased typing speed
+                setTimeout(typeCode, 300); // Typing speed delay
             }
         }
 
-        typeCode();
+        video.onended = function() {
+            video.style.display = 'none';
+            content.style.display = 'block';
+            codeBox.style.display = 'block';
+            typeCode();
+        };
     </script>
 </body>
 </html>
