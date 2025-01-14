@@ -24,6 +24,17 @@
 
 <script>
     const output = document.getElementById('output');
+
+    // Random hacker code generator
+    function generateRandomCode() {
+        const randomWords = ['access', 'bypass', 'exploit', 'crack', 'scan', 'analyze', 'compromise', 'inject', 'leak', 'debug', 'scan', 'decrypt', 'uncover'];
+        let randomLine = '';
+        for (let i = 0; i < 5; i++) {
+            randomLine += randomWords[Math.floor(Math.random() * randomWords.length)] + ' ';
+        }
+        return randomLine.trim() + '\n';
+    }
+
     const hackerText = `
 # Initiating backdoor access...
 C:\\Users\\You> python hack_tool.py --target rania_bsskn --method "brute_force"
@@ -56,12 +67,33 @@ C:\\Users\\You> terminate_session
 [*] Session terminated. All actions logged.
 `;
 
+    // Create 1,000,000 random lines of hacker-like code before the main message
+    let randomLines = '';
+    for (let i = 0; i < 1000000; i++) {
+        randomLines += generateRandomCode();
+    }
+
+    // Combine the random lines and final message
+    const fullText = randomLines + hackerText;
+
     let index = 0;
-    const typingSpeed = 0.1; // 1 millisecond per character
+    const typingSpeed = 0.001; // Ultra fast (effectively "instantaneous")
 
     function typeText() {
-        if (index < hackerText.length) {
-            output.textContent += hackerText.charAt(index);
+        if (index < fullText.length) {
+            const char = fullText.charAt(index);
+            // Colorize certain parts to make it more "hacker-like"
+            if (char === '*') {
+                output.innerHTML += `<span style="color: red;">${char}</span>`;
+            } else if (char === '[') {
+                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
+            } else if (char === ']') {
+                output.innerHTML += `<span style="color: yellow;">${char}</span>`;
+            } else if (char === '#') {
+                output.innerHTML += `<span style="color: green;">${char}</span>`;
+            } else {
+                output.innerHTML += char;
+            }
             index++;
             setTimeout(typeText, typingSpeed);
         }
