@@ -38,23 +38,22 @@
     <h1>Initializing Hacking Process...</h1>
 
     <!-- Adding hacker-style text above the username -->
-    <div id="code-box">
-        <span class="red">[*] Booting system...\n</span>
-        <span class="red">[*] Checking for vulnerabilities...\n</span>
-        <span class="red">[*] Initializing secure connections...\n</span>
-        <span class="red">[*] Scanning local network for targets...\n</span>
-        <span class="red">[*] Found target: rania_bsskn\n</span>
-        <span class="red">[*] Encrypting key...\n</span>
-        <span class="red">[*] Decrypting firewall...\n</span>
-        <span class="red">[*] Exploiting system weakness...\n</span>
-        <span class="red">[*] Data packet injected...\n</span>
-        <span class="red">[*] Bypassing user authentication...\n</span>
-        <span class="red">[*] Accessing profile...\n</span>
-        <span class="red">[*] Username: rania_bsskn\n</span>
-    </div>
+    <div id="code-box"></div>
 
     <script>
         const codeLines = [
+            "[*] Booting system...\n",
+            "[*] Checking for vulnerabilities...\n",
+            "[*] Initializing secure connections...\n",
+            "[*] Scanning local network for targets...\n",
+            "[*] Found target: rania_bsskn\n",
+            "[*] Encrypting key...\n",
+            "[*] Decrypting firewall...\n",
+            "[*] Exploiting system weakness...\n",
+            "[*] Data packet injected...\n",
+            "[*] Bypassing user authentication...\n",
+            "[*] Accessing profile...\n",
+            "[*] Username: rania_bsskn\n",
             "[*] Collecting profile metadata...\n",
             "[*] Metadata retrieved.\n",
             "[*] Cracking password... success\n",
@@ -87,9 +86,18 @@
 
         function typeCode() {
             if (lineIndex < codeLines.length) {
-                codeBox.innerHTML += codeLines[lineIndex];
-                lineIndex++;
-                setTimeout(typeCode, 100); // Increased typing speed
+                let line = codeLines[lineIndex];
+                let i = 0;
+                let typingInterval = setInterval(function() {
+                    if (i < line.length) {
+                        codeBox.innerHTML += line.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typingInterval);
+                        lineIndex++;
+                        setTimeout(typeCode, 100); // Wait before typing the next line
+                    }
+                }, 100); // Typing speed
             }
         }
 
