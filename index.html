@@ -21,32 +21,26 @@
     <h1>Initializing Hacking Process...</h1>
     <div id="code-box"></div>
     <script>
-        // Function to pick random color with green being more likely
+        // Function to return mostly green and some red
         function getRandomColor() {
-            const colors = ['#00FF00', '#FF4500', '#00FFFF', '#FFD700', '#FF1493'];
-            const greenWeight = 0.8; // Probability for green
-            if (Math.random() < greenWeight) {
-                return '#00FF00'; // Green
-            }
-            return colors[Math.floor(Math.random() * colors.length)];
+            const greenWeight = 0.9; // 90% green
+            return Math.random() < greenWeight ? '#00FF00' : '#FF0000'; // Green or Red
         }
 
-        // Array of hacker-like lines with more variety
+        // Array of hacker-style text with many default lines
         const codeLines = [];
-        for (let i = 0; i < 500; i++) {
-            codeLines.push(`[INFO] Executing process ${Math.random().toString(36).substring(7)}...\n`);
-            codeLines.push(`[WARN] Analyzing vulnerabilities in target system...\n`);
-            codeLines.push(`[ERROR] Unexpected token found at 0x${Math.floor(Math.random() * 10000).toString(16)}...\n`);
-            codeLines.push(`[DEBUG] Packet intercepted from IP 192.168.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}...\n`);
-            codeLines.push(`[ACTION] Bypassing security layer ${Math.floor(Math.random() * 10)}... success\n`);
-            codeLines.push(`[TRACE] User activity logged at ${new Date().toISOString()}...\n`);
+        for (let i = 0; i < 10000; i++) {
+            codeLines.push(`[INFO] Running process id-${Math.random().toString(36).substring(2, 8)}...\n`);
+            codeLines.push(`[ACTION] Exploiting vulnerability in system module...\n`);
+            codeLines.push(`[DEBUG] Analyzing incoming data packets...\n`);
+            codeLines.push(`[TRACE] Monitoring network activity on port ${Math.floor(Math.random() * 65536)}...\n`);
+            codeLines.push(`[SECURITY] Override protocol activated...\n`);
         }
 
-        // Add the final "big reveal" line at the end
+        // Add the final big reveal at the end
         codeLines.push("\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠");
 
         let codeBox = document.getElementById('code-box');
-        let delay = 10; // Faster typing speed
         let lineIndex = 0;
 
         function typeCode() {
@@ -55,12 +49,13 @@
                 const span = document.createElement('span');
                 span.textContent = line;
 
-                // Assign a random color to the line
+                // Set the color to green or red
                 span.style.color = getRandomColor();
 
                 codeBox.appendChild(span);
                 lineIndex++;
-                setTimeout(typeCode, delay); // Typing speed control
+                // Immediate typing speed
+                setTimeout(typeCode, 1); 
             }
         }
 
