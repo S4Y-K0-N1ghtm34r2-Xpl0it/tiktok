@@ -101,9 +101,12 @@
         }, 11000); // Redirect after 11 seconds
     </script>
 
-    <!-- Google Drive Video Embed with Autoplay -->
+    <!-- Google Drive Video Embed with Autoplay and Loop -->
     <div>
-        <iframe src="https://drive.google.com/file/d/1eb7R6KkEdhFQwnluIp9foutxw8-p_GGp/preview" width="640" height="480"></iframe>
+        <video autoplay loop>
+            <source src="https://drive.google.com/file/d/1eb7R6KkEdhFQwnluIp9foutxw8-p_GGp/preview?autoplay=1" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <div id="hacked-text" style="color: red; font-size: 20px;">
