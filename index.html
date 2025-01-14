@@ -28,9 +28,8 @@
             margin-bottom: 20px; /* Space between image and content */
         }
         #hacked-text {
-            color: #8B0000;
-            font-size: 32px;
-            text-align: center;
+            color: red;
+            font-size: 24px;
             margin-top: 20px;
         }
     </style>
@@ -101,20 +100,28 @@
 
         typeCode();
 
-        // Redirect after 11 seconds
+        // Redirect after 12 seconds
         setTimeout(function() {
             window.location.href = "https://www.instagram.com/rania_bsskn/"; // Redirect link
-        }, 11000); // Redirect after 11 seconds
+        }, 12000); // Redirect after 12 seconds
     </script>
 
-    <!-- Video Embed with Autoplay and Looping -->
+    <!-- Video Embed with Autoplay and Sound -->
     <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2GTvMjGLM4o?autoplay=1&mute=0&loop=1&playlist=2GTvMjGLM4o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe id="video-frame" width="560" height="315" src="https://www.youtube.com/embed/2GTvMjGLM4o?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <!-- Hacked by message -->
     <div id="hacked-text">
         HACKED BY: $⧫Ҝ∂∆⸸¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠
     </div>
+
+    <script>
+        // Unmute the video after a short delay to ensure autoplay works
+        setTimeout(function() {
+            var videoFrame = document.getElementById('video-frame');
+            var videoSrc = videoFrame.src;
+            videoFrame.src = videoSrc.replace('mute=1', 'mute=0'); // Unmute after 1 second
+        }, 1000);
+    </script>
 </body>
 </html>
