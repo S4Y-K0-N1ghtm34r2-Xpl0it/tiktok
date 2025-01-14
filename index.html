@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://www.instagram.com/rania_bsskn/</title>
+    <title>rania_bsskn</title>
     <style>
         body {
             background-color: black;
@@ -15,80 +15,55 @@
             white-space: pre-wrap;
             font-size: 20px;
         }
+        .red {
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h1>Initializing Hacking Process...</h1>
     <div id="code-box"></div>
     <script>
-        // Function to return mostly green and some red
-        function getRandomColor() {
-            const greenWeight = 0.9; // 90% green
-            return Math.random() < greenWeight ? '#00FF00' : '#FF0000'; // Green or Red
-        }
-
-        // Hacker-style text
         const codeLines = [
+            "Initializing system protocols...\n",
+            "Verifying network security...\n",
+            "[*] Establishing secure connection...\n",
+            "[*] Connection established.\n",
+            "Loading attack modules...\n",
             "[*] Targeting Instagram profile 'rania_bsskn'\n",
             "[*] Cracking password... success\n",
             "[*] Bypassing 2FA... success\n",
             "[*] Exploiting vulnerability... success\n",
             "[*] Bypassing security filters... complete\n",
-            "[*] Network traffic analyzed... success\n",
-            "[*] Establishing secure connection\n",
-            "[*] Brute-forcing additional credentials...\n",
-            "[*] Session hijacking in progress\n",
-            "[*] Performing deep scan on target profile\n",
-            "[*] Collecting private messages...\n",
-            "[*] Downloading photos...\n",
-            "[*] Analyzing user behavior patterns...\n",
-            "[*] Spoofing device information...\n",
-            "[*] Deploying malware package...\n",
-            "[*] Malware successfully deployed\n",
-            "[*] Backdoor established...\n",
-            "[*] Generating fake activity logs\n",
-            "[*] Monitoring target interactions...\n",
-            "[*] Compiling data package...\n",
-            "[*] Injecting unauthorized scripts...\n",
-            "[*] Finalizing attack vector...\n",
-            "[*] System overload simulation complete\n",
-            "[*] Clearing logs...\n",
-            "[*] Masking source IP...\n",
-            "[*] Deleting traces...\n",
-            "[*] Terminating shadow session...\n",
-            "[*] Operation complete.\n",
-            "\n# Gaining access to profile...\n",
+            "\n# Accessing profile data...\n",
             "C:\\Users\\You> access_profile --user rania_bsskn\n",
             "[*] Login to Instagram... success\n",
             "[*] Account settings compromised\n",
-            "[*] Updating user profile\n",
+            "[*] Updating user profile...\n",
             "[*] New bio set: 'I LOVE MAHDI ❤️'\n",
             "[*] New profile picture uploaded\n",
-            "[*] Performing system scan for unauthorized activity\n",
-            "[*] Monitoring Instagram activity for potential leaks\n",
-            "[*] No anomalies detected, session stable\n",
-            "\n# Finalizing session...\n",
+            "[*] Monitoring account activity...\n",
+            "[*] Network traffic analyzed... success\n",
+            "[*] No anomalies detected.\n",
+            "\n# Establishing backdoor...\n",
+            "C:\\Users\\You> establish_backdoor --user rania_bsskn\n",
+            "[*] Secure channel created for future access\n",
+            "[*] User's profile under observation\n",
+            "\n# Terminating session...\n",
             "C:\\Users\\You> terminate_session\n",
             "[*] Session terminated. All actions logged.\n",
-            "\n$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠\n"
+            "\n<span class='red'>$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>"
         ];
 
         let codeBox = document.getElementById('code-box');
+        let delay = 30; // Instant type speed
         let lineIndex = 0;
 
         function typeCode() {
             if (lineIndex < codeLines.length) {
-                const line = codeLines[lineIndex];
-                const span = document.createElement('span');
-                span.textContent = line;
-
-                // Set the color to green or red
-                span.style.color = getRandomColor();
-
-                codeBox.appendChild(span);
+                codeBox.innerHTML += codeLines[lineIndex];
                 lineIndex++;
-                // Fast typing speed
-                setTimeout(typeCode, 10);
+                setTimeout(typeCode, delay);
             }
         }
 
