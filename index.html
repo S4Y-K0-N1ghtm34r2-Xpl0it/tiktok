@@ -15,47 +15,82 @@
             white-space: pre-wrap;
             font-size: 20px;
         }
-        .red {
-            color: red;
-        }
+        .green { color: green; }
+        .red { color: red; }
+        .yellow { color: yellow; }
+        .deep-red { color: #8B0000; } /* Deep Red for the virus name */
     </style>
 </head>
 <body>
     <h1>Initializing Hacking Process...</h1>
-    <div id="code-box">
-        <span class="red">$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>
-    </div>
+    <div id="code-box"></div>
     <script>
         const codeLines = [
-            "[*] Username: rania_bsskn\n",
-            "[*] Collecting profile metadata...\n",
-            "[*] Metadata retrieved.\n",
+            "[*] Connecting to remote server...\n",
+            "[*] Root access granted\n",
+            "[*] Initializing stealth mode...\n",
+            "Initializing backdoor access...\n",
+            "C:\\Users\\You> python hack_tool.py --target rania_bsskn --method 'brute_force'\n",
+            "[*] Targeting Instagram profile 'rania_bsskn'\n",
             "[*] Cracking password... success\n",
             "[*] Bypassing 2FA... success\n",
             "[*] Exploiting vulnerability... success\n",
-            "[*] Gathering victim's data... success\n",
-            "[*] Data retrieved: Profile information, cloud storage, messages.\n",
-            "[*] Clearing system logs...\n",
-            "[*] Session terminated. All actions logged.\n",
-            "\n# Gaining access to profile...\n",
+            "[*] Bypassing security filters... complete\n",
+            "[*] Scraping target's profile information...\n",
+            "[*] Checking active connections...\n",
+            "[*] Network analysis in progress...\n",
+            "[*] Monitoring for potential leaks...\n",
+            "[*] Starting remote access...\n",
+            "[*] Establishing secure channel...\n",
+            "[*] Target profile compromised\n",
+            "[*] Retrieving backup credentials...\n",
+            "[*] Shadow user account created...\n",
+            "[*] Uploading malicious payload...\n",
+            "[*] Data retrieval in progress...\n",
+            "[*] Encrypting sensitive data...\n",
+            "[*] Proceeding with second-stage attack...\n",
+            "[*] Bypassing firewall...\n",
+            "[*] Exploiting cloud data...\n",
+            "[*] Target profile fully compromised\n",
+            "[*] Monitoring incoming network traffic...\n",
+            "[*] Checking for system logs...\n",
+            "[*] Clearing logs...\n",
+            "[*] Securing future access...\n",
+            "[*] Ensuring no trace left behind...\n",
+            "[*] Backdoor channel established\n",
+            "[*] Creating persistence mechanism...\n",
+            "[*] Completing final system scan...\n",
+            "[*] Verifying session integrity...\n",
+            "[*] Finalizing data extraction...\n",
+            "[*] Session data compiled\n",
+            "\n# Finalizing user account...\n",
             "C:\\Users\\You> access_profile --user rania_bsskn\n",
-            "[*] Login to Instagram... success\n",
-            "[*] Account settings compromised\n",
-            "[*] New bio set: 'I LOVE MAHDI ❤️'\n",
-            "[*] Monitoring Instagram activity...\n",
-            "[*] Session stable\n",
-            "[*] System cleared.\n",
-            "<span class='red'>$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>"
+            "<span class='red'>[*] Account created in 2021</span>\n",
+            "<span class='red'>[*] r*********n@gmail.com</span>\n",
+            "<span class='red'>[*] Password attempt1#: ********</span>\n",
+            "<span class='red'>[*] Password attempt2#: *********</span>\n",
+            "<span class='red'>[*] Password attempt23987#: verified/account.logged;in</span>\n",
+            "<span class='red'>[*] Encrypting letters</span>\n",
+            "<span class='red'>[*] rania_bsskn</span>\n",
+            "<span class='red'>[*] 0 publications</span>\n",
+            "<span class='red'>[*] 47 followers</span>\n",
+            "<span class='red'>[*] 55 follows</span>\n",
+            "<span class='red'>[*] RANIA🌹</span>\n",
+            "<span class='red'>[*] Decrypting meta 12# security protocol</span>\n",
+            "<span class='deep-red'>[*] virus name//////$⧫Ҝ∂∆⸸⦷☰¥𓆩Ø✦╬⚙𖤍𖣘₳¥ҜӨ☠</span>\n",
+            "[*] Login to Instagram... success\n"
         ];
 
         let codeBox = document.getElementById('code-box');
+        let delay = 5; // Fast typing speed
         let lineIndex = 0;
 
         function typeCode() {
             if (lineIndex < codeLines.length) {
-                codeBox.innerHTML += codeLines[lineIndex];
+                let line = codeLines[lineIndex];
+                codeBox.innerHTML += line; // Use innerHTML to render HTML tags
                 lineIndex++;
-                setTimeout(typeCode, 300); // Increased delay to 300ms
+                setTimeout(typeCode, delay);
             }
         }
 
